@@ -1,0 +1,32 @@
+"""
+# how to Display Username and Password in Tkinter 'Login page'
+from tkinter import *
+def getvals():
+    print(uservalue.get())
+    print(passvalue.get())
+root = Tk()
+root.title("Umair Najmi")
+root.geometry("655x400")
+
+username = Label(root, text="Username")
+password = Label(root, text="Password")
+username.grid()
+password.grid(row=1)
+
+#  Variable classes in tkinter
+#  BooleanVar, DoubleVar, IntVar, StringVar
+
+uservalue = StringVar()
+passvalue = StringVar()
+
+userentry = Entry(root, textvariable = uservalue)
+passentry = Entry(root, textvariable = passvalue)
+
+userentry.grid(row=0, column=1)
+passentry.grid(row=1, column=1)
+#  I created a button here
+Button(text="Login", fg="red",padx=30,relief=SUNKEN, command=getvals).grid()
+
+root.mainloop()
+
+"""
